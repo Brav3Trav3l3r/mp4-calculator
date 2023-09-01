@@ -48,7 +48,7 @@ main {
 }
 
 /* CSS */
-.key {
+.key, .operators {
   align-items: center;
   background: #f8f9fa;
   border: 0 solid #e2e8f0;
