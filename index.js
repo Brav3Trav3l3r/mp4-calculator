@@ -4,17 +4,19 @@ const actions = document.querySelectorAll(".action");
 const operators = document.querySelectorAll(".operators");
 
 /*
-  -default value is 0
-  -if length is 1 && value is "0" 
-      * if clicked a number replace 0 
-      * if click 0 dont add
-  - operators  
-    * if last index is operator click on operator will not work 
-    * 
-    *
-  
-  - if last index is not number remove it
 
+  -keys
+    * when value (0), cannot add another 0
+    * cannot add simultaneous (.)
+    
+  -operators
+    * cannot add simaltaneous operators
+
+  -actions
+    * if action = equal, check if last index is operator, if so remove it and then eval(str)
+    * if action = delte, if length is 1 => hard code 0, else => remove last index
+    * if action = reset, hard code 0
+  
 */
 
 keys.forEach((element) => {
@@ -45,7 +47,6 @@ operators.forEach((element) => {
       display.innerHTML[display.innerHTML.length - 1] === "+" ||
       display.innerHTML[display.innerHTML.length - 1] === "*"
     ) {
-      console.log(typeof display.innerHTML[display.innerHTML.length - 1]);
       return display.innerHTML;
     }
     return (display.innerHTML += e.target.value);
