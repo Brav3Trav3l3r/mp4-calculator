@@ -39,9 +39,6 @@ main {
   font-weight: 600;
   padding: 0rem 1rem;
   color: #495057;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-  flex-wrap: nowrap;
 }
 
 .keys {
