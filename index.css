@@ -3,10 +3,10 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
-  font-family: "Roboto Mono", monospace;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -23,6 +23,7 @@ main {
   gap: 1.5rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  width: 380px;
 }
 
 .display {
@@ -31,7 +32,6 @@ main {
   background-color: #ecf8f8;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
     rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -39,6 +39,9 @@ main {
   font-weight: 600;
   padding: 0rem 1rem;
   color: #495057;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 
 .keys {
@@ -47,18 +50,18 @@ main {
   gap: 1rem;
 }
 
-/* CSS */
-.key, .operators {
+.key,
+.operators,
+.action {
   align-items: center;
   background: #f8f9fa;
   border: 0 solid #e2e8f0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -1px rgba(255, 33, 33, 0.06);
   box-sizing: border-box;
   color: #212529;
   display: inline-flex;
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   height: 56px;
   justify-content: center;
@@ -75,7 +78,9 @@ main {
   animation: all 2s;
 }
 
-.key:active {
+.key:active,
+.operators:active,
+.action:active {
   transform: translateY(1px);
   background: #efeff0;
 }
@@ -91,19 +96,18 @@ main {
 }
 
 .reset {
-  /* background-color: #14213d; */
-  color: #ffc15c;
+  color: #c2c2c2;
 }
 
 .equal {
-  background-color: #00509d;
+  background-color: #4e95d8;
   color: #ecf8f8;
 }
 
-.delete:active{
-    background-color: #d63638;
+.delete:active {
+  background-color: #d63638;
 }
 
-.equal:active{
-    background-color: #004586;
+.equal:active {
+  background-color: #4b8ece;
 }
