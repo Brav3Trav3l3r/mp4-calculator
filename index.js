@@ -14,7 +14,7 @@ const operators = document.querySelectorAll(".operators");
 
   -actions
     * if action = equal, check if last index is operator, if so remove it and then eval(str)
-    * if action = delte, if length is 1 => hard code 0, else => remove last index
+    * if action = delete, if length is 1 => hard code 0, else => remove last index
     * if action = reset, hard code 0
   
 */
