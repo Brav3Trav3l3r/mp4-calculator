@@ -45,7 +45,8 @@ operators.forEach((element) => {
     if (
       display.innerHTML[display.innerHTML.length - 1] === "-" ||
       display.innerHTML[display.innerHTML.length - 1] === "+" ||
-      display.innerHTML[display.innerHTML.length - 1] === "*"
+      display.innerHTML[display.innerHTML.length - 1] === "*" ||
+      display.innerHTML[display.innerHTML.length - 1] === "/" 
     ) {
       return display.innerHTML;
     }
@@ -60,7 +61,8 @@ actions.forEach((element) => {
         if (
           display.innerHTML[display.innerHTML.length - 1] === "-" ||
           display.innerHTML[display.innerHTML.length - 1] === "+" ||
-          display.innerHTML[display.innerHTML.length - 1] === "*"
+          display.innerHTML[display.innerHTML.length - 1] === "*" ||
+          display.innerHTML[display.innerHTML.length - 1] === "/" 
         ) {
           display.innerHTML = display.innerHTML.slice(
             0,
