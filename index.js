@@ -46,7 +46,7 @@ operators.forEach((element) => {
       display.innerHTML[display.innerHTML.length - 1] === "-" ||
       display.innerHTML[display.innerHTML.length - 1] === "+" ||
       display.innerHTML[display.innerHTML.length - 1] === "*" ||
-      display.innerHTML[display.innerHTML.length - 1] === "/" 
+      display.innerHTML[display.innerHTML.length - 1] === "/"
     ) {
       return display.innerHTML;
     }
@@ -62,14 +62,14 @@ actions.forEach((element) => {
           display.innerHTML[display.innerHTML.length - 1] === "-" ||
           display.innerHTML[display.innerHTML.length - 1] === "+" ||
           display.innerHTML[display.innerHTML.length - 1] === "*" ||
-          display.innerHTML[display.innerHTML.length - 1] === "/" 
+          display.innerHTML[display.innerHTML.length - 1] === "/"
         ) {
           display.innerHTML = display.innerHTML.slice(
             0,
             display.innerHTML.length - 1
           );
         }
-        display.innerHTML = eval(display.innerHTML);
+        display.innerHTML = eval(display.innerHTML).toFixed(2);
         break;
       case "delete":
         if (display.innerHTML.length === 1) {
