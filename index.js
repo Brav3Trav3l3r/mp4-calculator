@@ -6,11 +6,9 @@ const operators = document.querySelectorAll(".operators");
 /*
   -keys
     * when value (0), cannot add another 0
-    * cannot add simultaneous (.)
-    
+    * cannot add simultaneous (.)    
   -operators
     * cannot add simaltaneous operators
-
   -actions
     * if action = equal, check if last index is operator, if so remove it and then eval(str)
     * if action = delte, if length is 1 => hard code 0, else => remove last index
