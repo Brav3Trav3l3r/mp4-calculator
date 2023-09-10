@@ -4,7 +4,6 @@ const actions = document.querySelectorAll(".action");
 const operators = document.querySelectorAll(".operators");
 
 /*
-
   -keys
     * when value (0), cannot add another 0
     * cannot add simultaneous (.)
@@ -16,7 +15,6 @@ const operators = document.querySelectorAll(".operators");
     * if action = equal, check if last index is operator, if so remove it and then eval(str)
     * if action = delete, if length is 1 => hard code 0, else => remove last index
     * if action = reset, hard code 0
-  
 */
 
 keys.forEach((element) => {
