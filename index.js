@@ -67,7 +67,7 @@ actions.forEach((element) => {
             display.innerHTML.length - 1
           );
         }
-        display.innerHTML = eval(display.innerHTML).toFixed(2);
+        display.innerHTML = Math.ceil(eval(display.innerHTML) * 100)/100;
         break;
       case "delete":
         if (display.innerHTML.length === 1) {
